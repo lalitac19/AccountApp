@@ -29,5 +29,11 @@ public class Service {
 		
 	}
 	
+	public HashMap<Integer, Account> getAllAccounts(){
+		return accounts; 
+	}
+	
+	
+	
 	
 }
