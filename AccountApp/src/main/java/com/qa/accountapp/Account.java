@@ -1,13 +1,10 @@
-package com.qa.AccountApp;
+package com.qa.accountapp;
 
 public class Account {
 private String firstName;
 private String lastName;
 private int accountNumber;
 
-public Account() {
-	
-}
 
 public Account(String fName, String lName, int accNum) {
 	this.setFirstName(fName);
