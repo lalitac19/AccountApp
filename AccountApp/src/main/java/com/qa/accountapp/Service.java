@@ -1,4 +1,4 @@
-package com.qa.AccountApp;
+package com.qa.accountapp;
 
 import java.util.HashMap;
 import java.util.Iterator;
@@ -6,7 +6,7 @@ import java.util.Map;
 import java.util.Set;
 
 public class Service {
-	HashMap <Integer, Account> accounts = new HashMap <Integer, Account>();
+	HashMap <Integer, Account> accounts = new HashMap <>();
 	
 	public void addAccount(Account newAccount) {
 		accounts.put(newAccount.getAccountNumber(), newAccount); 

@@ -1,4 +1,4 @@
-package com.qa.AccountApp;
+package com.qa.accountapp;
 
 /**
  * Hello world!
@@ -6,6 +6,8 @@ package com.qa.AccountApp;
  */
 public class App 
 {
+	
+	private App() {}
     public static void main( String[] args )
     {
     	
@@ -19,7 +21,7 @@ public class App
        newService.addAccount(account3);
        newService.addAccount(account4);
        
-      // newService.printAccounts();
+       newService.printAccounts();
        System.out.println(newService.retrieveAccount(12444) );
     }
 }
