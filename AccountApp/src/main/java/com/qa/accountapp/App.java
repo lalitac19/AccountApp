@@ -1,9 +1,9 @@
 package com.qa.accountapp;
+import java.io.File;
 
-/**
- * Hello world!
- *
- */
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.qa.accountapp.*;
+
 public class App 
 {
 	
@@ -22,6 +22,19 @@ public class App
        newService.addAccount(account4);
        
        newService.printAccounts();
-       System.out.println(newService.retrieveAccount(12444) );
+      System.out.println(newService.retrieveAccount(12444) );
+    
+       ObjectMapper mapper = new ObjectMapper();
+       
+       /**
+        * Write object to file
+        */
+       try {
+
+          System.out.println(mapper.writerWithDefaultPrettyPrinter().writeValueAsString(newService.getAllAccounts()));
+       } catch (Exception e) {
+           e.printStackTrace();
+       }
+    
     }
 }
