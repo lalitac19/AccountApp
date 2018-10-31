@@ -16,19 +16,19 @@ public class App
        Account account1 = new Account("Lalita", "Chopra", 1234);
        Account account3 = new Account("John", "Day", 12444);
        Account account4 = new Account("Lilly", "Rose", 123435);
+       Account account5 = new Account("Lalita", "Chopra", 1234);
+       Account account6 = new Account("Lalita", "Chopra", 1234);
        
        newService.addAccount(account1);
        newService.addAccount(account3);
        newService.addAccount(account4);
+       newService.addAccount(account5);
+       newService.addAccount(account6);
        
-       newService.printAccounts();
+      System.out.println( newService.getAllAccounts());
       System.out.println(newService.retrieveAccount(12444) );
     
        ObjectMapper mapper = new ObjectMapper();
-       
-       /**
-        * Write object to file
-        */
        try {
 
           System.out.println(mapper.writerWithDefaultPrettyPrinter().writeValueAsString(newService.getAllAccounts()));
