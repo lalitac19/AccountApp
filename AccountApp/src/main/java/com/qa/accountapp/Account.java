@@ -1,9 +1,23 @@
 package com.qa.accountapp;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Account {
-private String firstName;
-private String lastName;
-private int accountNumber;
+
+	@Id @GeneratedValue(strategy=GenerationType.AUTO)
+	private int accountNumber;
+	
+	@Column(length = 30)
+	private String firstName;
+	@Column(length = 30)
+	private String lastName;
+
+
 
 
 public Account(String fName, String lName, int accNum) {
