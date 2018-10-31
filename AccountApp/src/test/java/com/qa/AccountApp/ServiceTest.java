@@ -16,11 +16,14 @@ public class ServiceTest {
 		Service newService = new Service();
 		
 		Account account = new Account("Lalita", "Chopra", 1234);
+		Account account1 = new Account("Lalita", "Chopra", 2345);
+		
 		newService.addAccount(account);
-	
+		newService.addAccount(account1);
+		
 		int actual = newService.getOccurencesOfFirstNameInAccountMap("Lalita");
 		System.out.println(actual);
-		Assert.assertEquals(1, actual);
+		Assert.assertEquals(2, actual);
 	}
 	
 }
