@@ -14,9 +14,9 @@ public class Account {
 	
 	@Column(length = 30)
 	private String firstName;
+	
 	@Column(length = 30)
 	private String lastName;
-
 
 
 
