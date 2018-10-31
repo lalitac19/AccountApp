@@ -7,6 +7,7 @@ import java.util.Set;
 
 public class Service {
 	HashMap <Integer, Account> accounts = new HashMap <>();
+
 	
 	public void addAccount(Account newAccount) {
 		accounts.put(newAccount.getAccountNumber(), newAccount); 
@@ -31,6 +32,18 @@ public class Service {
 	
 	public HashMap<Integer, Account> getAllAccounts(){
 		return accounts; 
+	}
+
+
+	public int getOccurencesOfFirstNameInAccountMap(String firstName) {
+		int count =0;
+		
+		for (Account account : accounts.values()) {
+			if (account.getFirstName().equals(firstName)){
+				count +=1;
+			}
+		}
+		return count;
 	}
 	
 	
